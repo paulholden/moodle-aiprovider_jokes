@@ -25,4 +25,6 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['apikey'] = 'API key';
+$string['apikey_help'] = 'Obtain an API key from <a href="https://www.api-ninjas.com/api/jokes">api-ninjas.com</a> and enter here';
 $string['pluginname'] = 'Jokes';
+$string['privacy:metadata'] = 'The Jokes AI provider plugin does not store any personal data';

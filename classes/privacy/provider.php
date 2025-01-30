@@ -16,33 +16,25 @@
 
 declare(strict_types=1);
 
-namespace aiprovider_jokes\form;
+namespace aiprovider_jokes\privacy;
 
-use core_ai\hook\after_ai_provider_form_hook;
+use core_privacy\local\metadata\null_provider;
 
 /**
- * AI provider form
+ * Plugin privacy provider
  *
  * @package    aiprovider_jokes
  * @copyright  2025 Paul Holden <paulh@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class ai_provider_form {
+class provider implements null_provider {
 
     /**
-     * Define form
+     * Plugin language string identifier to explain why this plugin stores no data
      *
-     * @param after_ai_provider_form_hook $hook
+     * @return string
      */
-    public static function set_form_definition(after_ai_provider_form_hook $hook): void {
-        if ($hook->plugin !== 'aiprovider_jokes') {
-            return;
-        }
-
-        $mform = $hook->mform;
-
-        $mform->addElement('passwordunmask', 'apikey', get_string('apikey', 'aiprovider_jokes'));
-        $mform->addHelpButton('apikey', 'apikey', 'aiprovider_jokes');
-        $mform->addRule('apikey', get_string('required'), 'required', null, 'client');
+    public static function get_reason(): string {
+        return 'privacy:metadata';
     }
 }

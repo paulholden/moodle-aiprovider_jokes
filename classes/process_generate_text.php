@@ -18,8 +18,7 @@ declare(strict_types=1);
 
 namespace aiprovider_jokes;
 
-use core\di;
-use core\http_client;
+use core\{di, http_client};
 use core_ai\process_base;
 use GuzzleHttp\Psr7\{Request, Uri};
 
@@ -41,10 +40,9 @@ class process_generate_text extends process_base {
         $request = $this->provider->add_authentication_headers(new Request('GET', '', ['Content-Type' => 'application/json']));
 
         try {
-            $response = di::get(http_client::class)->send(
-                $request,
-                ['base_uri' => new Uri('https://api.api-ninjas.com/v1/jokes')]
-            );
+            $response = di::get(http_client::class)->send($request, [
+                'base_uri' => new Uri('https://api.api-ninjas.com/v1/jokes'),
+            ]);
         } catch (\Exception $e) {
             return [
                 'success' => false,
