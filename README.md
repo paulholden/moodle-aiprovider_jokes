@@ -1,4 +1,4 @@
-# Jokes AI provider
+# Jokes AI provider [![Build Status](https://github.com/paulholden/moodle-aiprovider_jokes/workflows/moodle-plugin-ci/badge.svg)](https://github.com/paulholden/moodle-aiprovider_jokes/actions)
 
 ## Requirements
 
