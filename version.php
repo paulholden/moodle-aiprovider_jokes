@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $plugin->component = 'aiprovider_jokes';
-$plugin->release   = '1.0';
-$plugin->version   = 2025041400;
+$plugin->release   = '1.0.1';
+$plugin->version   = 2025050600;
 $plugin->requires  = 2025041400; // Moodle 5.0 onwards.
 $plugin->maturity  = MATURITY_STABLE;
