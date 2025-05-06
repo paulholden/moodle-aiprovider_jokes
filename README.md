@@ -12,6 +12,11 @@ Once installed, you should see a new option in your site administration:
 
 > General -> AI -> AI providers
 
+## API key
+
+To obtain an API key to use the external service, please visit [api-ninjas.com](https://www.api-ninjas.com/api/jokes) - it will be required
+when configuring  the provider instance
+
 ## Author
 
 Paul Holden (paulh@moodle.com)
