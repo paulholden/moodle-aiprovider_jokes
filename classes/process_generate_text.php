@@ -37,6 +37,7 @@ class process_generate_text extends process_base {
      * @return array
      */
     protected function query_ai_api(): array {
+        // We ignore any prompt text.
         $request = $this->provider->add_authentication_headers(new Request('GET', '', ['Content-Type' => 'application/json']));
 
         try {

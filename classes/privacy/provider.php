@@ -18,7 +18,8 @@ declare(strict_types=1);
 
 namespace aiprovider_jokes\privacy;
 
-use core_privacy\local\metadata\null_provider;
+use core_privacy\local\metadata\{collection, provider as metadata_provider};
+use core_privacy\local\request\data_provider;
 
 /**
  * Plugin privacy provider
@@ -27,14 +28,18 @@ use core_privacy\local\metadata\null_provider;
  * @copyright  2025 Paul Holden <paulh@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class provider implements null_provider {
+class provider implements data_provider, metadata_provider {
 
     /**
-     * Plugin language string identifier to explain why this plugin stores no data
+     * Returns metadata about this system
      *
-     * @return string
+     * @param collection $collection
+     * @return collection
      */
-    public static function get_reason(): string {
-        return 'privacy:metadata';
+    public static function get_metadata(collection $collection): collection {
+        $collection->add_external_location_link('aiprovider_jokes', [
+            'apikey' => 'privacy:metadata:aiprovider_jokes:apikey',
+        ], 'privacy:metadata:aiprovider_jokes:externallink');
+        return $collection;
     }
 }

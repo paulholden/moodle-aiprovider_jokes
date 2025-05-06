@@ -28,4 +28,5 @@ $string['apikey'] = 'API key';
 $string['apikey_help'] = 'Obtain an API key from <a href="https://www.api-ninjas.com/api/jokes">api-ninjas.com</a> and enter here';
 $string['apikey_link'] = 'https://www.api-ninjas.com/api/jokes';
 $string['pluginname'] = 'Jokes';
-$string['privacy:metadata'] = 'The Jokes AI provider plugin does not store any personal data';
+$string['privacy:metadata:aiprovider_jokes:apikey'] = 'The provider configured API key';
+$string['privacy:metadata:aiprovider_jokes:externallink'] = 'This information is sent to api-ninjas.com in order for a response to be generated. No user data is explicitly sent to the external service or stored in Moodle LMS by this plugin.';
