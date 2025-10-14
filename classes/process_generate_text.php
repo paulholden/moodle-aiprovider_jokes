@@ -30,7 +30,6 @@ use GuzzleHttp\Psr7\{Request, Uri};
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class process_generate_text extends process_base {
-
     /**
      * Query the AI provider endpoint
      *

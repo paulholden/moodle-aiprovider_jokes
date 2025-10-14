@@ -33,7 +33,6 @@ use GuzzleHttp\Psr7\Request;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class provider_test extends advanced_testcase {
-
     /** @var manager $manager */
     private readonly manager $manager;
 

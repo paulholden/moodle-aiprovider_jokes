@@ -29,7 +29,6 @@ use core_privacy\local\request\data_provider;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class provider implements data_provider, metadata_provider {
-
     /**
      * Returns metadata about this system
      *

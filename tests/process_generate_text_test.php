@@ -35,7 +35,6 @@ use ReflectionMethod;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class process_generate_text_test extends advanced_testcase {
-
     /** @var manager $manager */
     private readonly manager $manager;
 

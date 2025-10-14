@@ -28,7 +28,6 @@ use core_ai\hook\after_ai_provider_form_hook;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class ai_provider_form {
-
     /**
      * Define form
      *
